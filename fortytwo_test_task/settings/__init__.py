@@ -1,5 +1,1 @@
-from .common import *
-try:
-    from .local import *
-except ImportError:
-    pass
+from .common import * # flake8: noqa

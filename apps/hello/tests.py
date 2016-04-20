@@ -32,7 +32,7 @@ class ContactsViewsTestCase(TestCase):
         response = self.client.get(reverse('home:index'))
         with open("apps/hello/fixtures/fixture.json") as data_file:
             data = json.load(data_file)
-        
+
         fields = data[1][u'fields']
         print(fields)
         for key, value in fields.iteritems():
