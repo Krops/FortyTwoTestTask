@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.views.generic.detail import DetailView
+from hello.models import Contact
 
-# Create your views here.
+
+class IndexView(DetailView):
+    template_name = 'hello/contacts.html'
+
+    def get_object(self):
+        try:
+            return Contact.objects.first()
+        except:
+            return None

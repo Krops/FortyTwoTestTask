@@ -1,0 +1,52 @@
+[
+   {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$12000$gouJDz83fxrW$CcNQDS/3fYyDLrdN7kvVGDXUXQAnF91SqDfdw4Hni6Q=",
+      "is_active": true,
+      "first_name": "",
+      "date_joined": "2015-08-03T15:54:07.232Z",
+      "is_staff": true,
+      "groups": [],
+      "email": "",
+      "last_login": "2015-08-12T00:39:37.935Z",
+      "username": "admin",
+      "last_name": "",
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "hello.Contact",
+    "pk": 1,
+    "fields": {
+      "name": "Andrew",
+      "last_name": "Kropiva",
+      "date_of_birth": "1992-06-11",
+      "bio": "A Django 1.6+ project template\nUse fortytwo_test_task.settings when deploying with getbarista.com\nRecomendations\n    apps in apps/ folder\n    use per-app templates folders\n    use per-app static folders\n    use migrations\n",
+      "phone": "+380962060772",
+      "email": "andrekropes@yandex.ru",
+      "jabber": "krop@wombat.org.ua",
+      "skype": "krop_dfa51",
+      "other_contacts": "Odessa",
+      "photo": "noavatar.jpg"
+    }
+  },
+  {
+    "model": "hello.Contact",
+    "pk": 2,
+    "fields": {
+      "name": "Андрей",
+      "last_name": "Кропива",
+      "date_of_birth": "1995-06-11",
+      "bio": "A Django 1.6+ project template\nUse fortytwo_test_task.settings when deploying with getbarista.com\nRecomendations\n    apps in apps/ folder\n    use per-app templates folders\n    use per-app static folders\n    use migrations\n",
+      "phone": "+380962060772",
+      "email": "andrekropes@yandex.ru",
+      "jabber": "krop@wombat.org.ua",
+      "skype": "krop_dfa51",
+      "other_contacts": "Odessa",
+      "photo": "noavatar.jpg"
+    }
+  }
+]
