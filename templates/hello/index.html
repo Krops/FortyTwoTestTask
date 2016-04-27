@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}42 Coffee Cups Test Assignment list{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+        <h2>42 Coffee Cups Test Assignment</h2>
+        {% if object %}
+            <div class="row">
+                <div class="col-xs-6">
+                    <div id="Name">{{ object.name }}</div>
+                    <div id='Last'>{{ object.last_name }}</div>
+                    <div id='Date'>{{ object.date_of_birth|date:'Y-m-d' }}</div>
+                    Bio:
+                    <div id='Bio'>{{ object.bio|linebreaks }}
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-6">
+                    <div id='Phone'>{{ object.phone }}</div>
+                    <div id='Email' >Email: {{ object.email }}</div>
+                    <div id='Jabber'>Jabber: {{ object.jabber }}</div>
+                    <div id='Skype'>Skype: {{ object.skype }}</div>
+                    Other contacts:
+                    <div id='Contacts'>{{ object.other_contacts|linebreaks }}</div>
+                </div>
+            </div>
+        
+        {% else %}
+            <p>No Contact</p>
+        {% endif %}
+        </div>
+        </section>
+{% endblock %}
