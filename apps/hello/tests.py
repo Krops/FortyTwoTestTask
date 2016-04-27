@@ -30,7 +30,7 @@ class ContactsViewsTestCase(TestCase):
     def test_fields(self):
         "Test our index view contact.html with required fields from json"
         response = self.client.get(reverse('home:index'))
-        with open("apps/hello/fixtures/fixture.json") as data_file:
+        with open("apps/hello/fixtures/initial_data.json") as data_file:
             data = json.load(data_file)
 
         fields = data[1][u'fields']

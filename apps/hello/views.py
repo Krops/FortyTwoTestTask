@@ -3,10 +3,7 @@ from hello.models import Contact
 
 
 class IndexView(DetailView):
-    template_name = 'hello/contacts.html'
+    template_name = 'hello/index.html'
 
     def get_object(self):
-        try:
-            return Contact.objects.first()
-        except:
-            return None
+        return Contact.objects.first()
