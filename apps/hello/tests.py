@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 
 
 class ContactsViewsTestCase(TestCase):
-    fixtures = ['fixture.json']
+    fixtures = ['initial_data.json']
 
     def test_index(self):
         "Test our index view contact.html with two contacts and cyrilic"
@@ -30,10 +30,8 @@ class ContactsViewsTestCase(TestCase):
     def test_fields(self):
         "Test our index view contact.html with required fields from json"
         response = self.client.get(reverse('home:index'))
-        with open("apps/hello/fixtures/initial_data.json") as data_file:
-            data = json.load(data_file)
-
-        fields = data[1][u'fields']
-        print(fields)
-        for key, value in fields.iteritems():
+        test_data = ['A Django 1.6+', 'Kropiva', 'Andrew', 'Odessa',
+                     '+380962060772', '1992-06-11', 'krop_dfa51',
+                     'krop@wombat.org.ua', 'andrekropes@yandex.ru']
+        for value in test_data:
             self.assertContains(response, value)

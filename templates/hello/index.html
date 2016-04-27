@@ -11,7 +11,7 @@
                     <div id='Last'>{{ object.last_name }}</div>
                     <div id='Date'>{{ object.date_of_birth|date:'Y-m-d' }}</div>
                     Bio:
-                    <div id='Bio'>{{ object.bio|linebreaks }}
+                    <div id='Bio'>{{ object.bio|linebreaks|safe }}
                 </div>
             </div>
             
