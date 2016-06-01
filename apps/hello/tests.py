@@ -34,3 +34,10 @@ class ContactsViewsTestCase(TestCase):
                      'krop@wombat.org.ua', 'andrekropes@yandex.ru']
         for value in test_data:
             self.assertContains(response, value)
+
+    def test_notification(self):
+        "Test notification page"
+        self.client.get(reverse('home:index'))
+        response = self.client.get(reverse('home:requests'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '"GET http://testserver/" 200')

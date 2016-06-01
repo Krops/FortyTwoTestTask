@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.hello.models import Contact
+from apps.hello.models import Contact, Notification
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class ContactAdmin(admin.ModelAdmin):
     search_fields = ["name", "last_name"]
 
 admin.site.register(Contact, ContactAdmin)
+admin.site.register(Notification)
